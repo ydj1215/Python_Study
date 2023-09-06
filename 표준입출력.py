@@ -16,9 +16,9 @@ print("""동해물과 백두산이 마르고 닳도록 하느님이
 무궁화 삼천리 화려 강산
 대한 사람 대한으로 길이 보전하세
 """
-)
+      )
 
-#end 와 sep 옵션
+# end 와 sep 옵션
 # end : 출력문에서 끝에 자동으로 삽입되는 문자를 지정하는 옵션:\n
 # sep : 출력문의 중간에 삽입되는 문자를 지정하는 옵션 : 기본은 space
 print("Hello", end=" ")
@@ -26,4 +26,11 @@ print("Hello")
 print("Hello", end="*")
 print("Hello")
 
-print("life", "is", "too", "short")
+print("life", "is", "too", "short", sep="\\")
+print("010", "1234", "5678", sep="-")
+year = 2023
+month = 9
+day = 6
+print(year, month, day, sep="/")  # 2023/9/6
+
+
