@@ -23,5 +23,23 @@
 # """)
 
 # split 함수의 기본은 공백 기준
-str1, str2 = input("이름과 주소 입력 : ").split(',')
-print(str1, str2)
+# str1, str2 = input("이름과 주소 입력 : ").split(',')
+# print(str1, str2)
+
+# kor, eng, mat = map(int, input("국어 영어 수학 : ").split())  # 형 변환
+# print(kor, eng, mat)
+
+# 형 변환 후 리스트로 받기
+# val = list(map(int, input("성적 입력 : ").split()))
+# print(val)
+#
+# hour, min, sec = input("시:분:초 : ").split(":")
+# print(f"현재 시작 : {hour}시 {min}분 {sec}초")
+
+# 시간을 24시간제이며 : 기준으로 입력 받은 후 오전과 오후로 출력하도록 변경
+hour, min, sec = map(int, input("시간을 입력하세요 : ").split(":"))
+if (hour > 12):
+    hour -= 12
+    print(f"오후{hour:02}시{min:02}분{sec:02}초") # 9시 -> 09시
+else:
+   print(f"오전{hour:02}세{min:02}분{sec:02}초")
