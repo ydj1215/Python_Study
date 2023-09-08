@@ -12,3 +12,13 @@ print("'Hello'")
 
 # 6005
 print('"Hello World"')
+
+# 6006
+print(""""!@#$%^&*()'""")
+print("\"!@#$%^&*()'")
+
+# 6007
+print("\"C:\Download\\'hello\'.py\"")
+
+# 6008
+print('print("Hello\\nWorld")')
