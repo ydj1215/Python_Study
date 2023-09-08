@@ -12,9 +12,12 @@ for i in range(n):
 money_2 = 0
 for i in range(n):
     money_2 += (val[i] // 60 + 1) * 15
-# print(f"money:{money_2}")
+# print(f"money_2:{money_2}")
 
-if min(money, money_2) == money:
-    print(f"M {money}")
-else :
-    print(f"Y {money_2}")
+# 출력
+if money < money_2:
+    print(f"Y {money}")
+elif money == money_2:
+    print(f"Y M {money_2}")
+else:
+    print(f"M {money_2}")

@@ -2,9 +2,16 @@ import sys
 
 name = input("이름 : ")
 
-age = int(input("나이 : "))
-if age < 1 or age > 199:
-    sys.exit()
+# age = int(input("나이 : "))
+# if age < 1 or age > 199:
+#     sys.exit()
+
+while True:
+    age = input("나이 :")
+    if age.isdigit():  # 문자열이 숫자로 구성되어 있는지 확인
+        age = int(age)
+        if 0 < age < 200: break
+    print("나이를 잘못 입력했습니다.")
 
 while 1:
     gender = input("성별 : ")
@@ -41,4 +48,3 @@ print(f"""이름 : {name}
 성별: {gender}
 직업: {job}
 """)
-    

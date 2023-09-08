@@ -21,14 +21,15 @@ val = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 if 1000000 <= num < 10000000:
     for i in range(7):
         index = int(num_string[i])
-        val[index] +=1
+        val[index] += 1
 elif 10000000 < num < 100000000:
     for i in range(8):
         index = int(num_string[i])
-        val[index] +=1
+        val[index] += 1
 elif 100000000 < num < 1000000000:
     for i in range(9):
         index = int(num_string[i])
-        val[index] +=1
+        val[index] += 1
 
-print(val)
+for a in (val):
+    print(a)
