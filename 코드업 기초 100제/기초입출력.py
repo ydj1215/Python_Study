@@ -71,7 +71,3 @@
 # 6024
 # a = list(input().split())
 # print(a[0], a[1], sep='')
-
-# 6025
-a,b = list(map(int,input().split()))
-print(a+b)
