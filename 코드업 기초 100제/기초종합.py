@@ -4,10 +4,11 @@
 # i=0
 # for i in range(a):
 # 	b.append(i)
-# 	if sum(b)>a:
+# 	if sum(b)>=a:
 # 		break
-# print(i-1)
+# print(i)
 import math
+import random
 
 # 6080
 # a,b = map(int,input().split())
@@ -50,6 +51,62 @@ import math
 # print(f'{e} MB')
 
 # 6085
-a,b,c=map(int,input().split())
-print(f'{a*b*c/8/1024/1024:.2f} MB')
+# a,b,c=map(int,input().split())
+# print(f'{a*b*c/8/1024/1024:.2f} MB')
 
+# 6086
+a = int(input())
+if a==1:
+	print(1)
+else:
+	s = 0
+	for i in range(a):
+		s += i
+		if s>= a:
+			break
+	print(s)
+
+# 6087
+# n = int(input())
+# for i in range(n+1):
+# 	if i%3!=0:
+# 		print(i, end=' ')
+
+# 6088
+# a,b,c = map(int,input().split())
+# n = a +b*(c-1)
+# print(n)
+
+# 6089
+# a,b,c=map(int,input().split())
+# d = a*(b**(c-1))
+# print(d)
+
+# 6090 (재귀)
+# def func(a, b, c, n):
+# 	if n == 1:
+# 		r = a
+# 	else:
+# 		r = func(a,b,c, n-1) * b + c
+# 	return r
+#
+# a,b,c,d = map(int,input().split())
+# print(func(a,b,c,d))
+
+# 6091
+# a, b, c = map(int, input().split())
+# for i in range(1,a * b * c+1):
+# 	if i % a == 0 and i % b == 0 and i % c == 0:
+# 		print(i)
+# 		break
+
+# 6092
+# a = int(input())
+# if a<1 or a>10000:
+# 	exit()
+# b = [0]*23
+# c = list(map(int,input().split()))
+# for i in range(len(c)):
+# 	b[c[i]-1] += 1
+# for e in b:
+# 	print(e, end=' ')
