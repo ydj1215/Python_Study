@@ -25,33 +25,3 @@
 # 		print(x[e][f], end=' ')
 # 	print()
 
-# 6096
-a = [[0] * 19 for _ in range(19)]
-for i in range(19):
-	b = list(map(int, input().split()))
-	a[i] = b
-n = int(input())
-for m in range(n):
-	x, y = map(int, input().split())
-	for p in range(19):
-		if a[p][x-1] == 0:
-			a[p][x - 1] =1
-		else:
-			a[p][x - 1] = 0
-	for q in range(19):
-		if a[y-1][q] == 0:
-			a[y - 1][q] =1
-		else:
-			a[y - 1][q] =0
-	# 출력
-	for t in range(len(a)):
-		for u in range(len(a[1])):
-			print(a[t][t], end=' ')
-		print()
-	print()
-
-		# 출력
-for t in range(len(a)):
-	for u in range(len(a[1])):
-		print(a[t][t], end=' ')
-	print()
