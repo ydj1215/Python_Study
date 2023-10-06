@@ -1,24 +1,37 @@
-def find(ls):
-	# 테두리
+def print_ls(ls):
 	for i in range(10):
-		ls[0][i] = 1
-		ls[i][0] = 1
-		ls[9][i] = 1
-		ls[i][9] = 1
-	# 출발
-	ls[1][1] = 9
-	for m in range(9):
-		for n in range(9):
-			if ls[m][n+1] != 1:
-
-
-def printing(ls):
-	for i in range(len(ls)):
-		for j in range(len(ls[0])):
+		for j in range(10):
 			print(ls[i][j], end=' ')
 		print()
 
 
-ls = [[0] * 10 for _ in range(10)]
-find(ls)
-printing(ls)
+def find(ls):
+	# 출발 지점
+	a = 1
+	b = 1
+	ls[a][b] = 9
+	while True:
+		# 도착 시 탈출
+		if ls[a][b] == 2:
+			ls[a][b] = 9
+			return
+		# 현재 위치 좌표
+		if ls[a][b + 1] != 1:
+			ls[a][b + 1] = 9
+			b = b + 1
+		else:
+			ls[a + 1][b] = 9
+			a = a + 1
+		if a == 9 or b == 9:
+			return
+
+
+# 입력
+x = [[0] * 10 for _ in range(10)]
+y = [0] * 10
+for i in range(10):
+	y = list(map(int, input().split()))
+	x[i] = y
+
+find(x)
+print_ls(x)
