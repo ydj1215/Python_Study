@@ -25,12 +25,9 @@ for i in range(19):
 n = int(input())
 for m in range(n):
 	x, y = map(int, input().split())
-	p = 0
-	q = 0
 	for p in range(19):
-		a[p][x - 1] = reverse(a[p][x - 1])
+		a[x - 1][p] = reverse(a[x - 1][p])
 	for q in range(19):
-		a[y - 1][q] = reverse(a[y - 1][q])
-	printing(a)
+		a[q][y - 1] = reverse(a[q][y - 1])
 
 printing(a)
