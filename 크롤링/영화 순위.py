@@ -1,6 +1,6 @@
 # 동적 : 셀리니움
 
-import requests
+import requests # 리액트의 axios 통신처럼, 파이썬에서 HTTP 요청을 보내기 위해 사용하는 모듈
 import json
 from bs4 import BeautifulSoup
 
